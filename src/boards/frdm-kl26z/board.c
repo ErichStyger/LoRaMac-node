@@ -71,21 +71,20 @@ void BoardInitMcu( void )
 {
   extern LDD_TDeviceData *SM1_DeviceData;
 
-  SX1276.Spi.Spi = SM1_DeviceData;
-#if 0
+    SX1276.Spi.Spi = SM1_DeviceData;
     if( McuInitialized == false )
     {
         // We use IRQ priority group 4 for the entire project
         // When setting the IRQ, only the preemption priority is used
-        NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
+        //NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
 
         // Disable Systick
-        SysTick->CTRL  &= ~SysTick_CTRL_TICKINT_Msk;    // Systick IRQ off 
-        SCB->ICSR |= SCB_ICSR_PENDSTCLR_Msk;            // Clear SysTick Exception pending flag
+        //SysTick->CTRL  &= ~SysTick_CTRL_TICKINT_Msk;    // Systick IRQ off
+        //SCB->ICSR |= SCB_ICSR_PENDSTCLR_Msk;            // Clear SysTick Exception pending flag
 
-        I2cInit( &I2c, I2C_SCL, I2C_SDA );
+        //I2cInit( &I2c, I2C_SCL, I2C_SDA );
 
-        SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
+        //SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
         SX1276IoInit( );
 
 #if defined( USE_DEBUG_PINS )
@@ -100,11 +99,10 @@ void BoardInitMcu( void )
 #ifdef LOW_POWER_MODE_ENABLE
         RtcInit( );
 #else
-        TimerHwInit( );
+     //   TimerHwInit( );
 #endif
         McuInitialized = true;
     }
-#endif
 }
 
 void BoardDeInitMcu( void )

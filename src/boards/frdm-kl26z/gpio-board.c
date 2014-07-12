@@ -14,54 +14,50 @@ Maintainer: Miguel Luis and Gregory Cristian
 */
 #include "board.h"
 #include "gpio-board.h"
-//#include "stm32l1xx_gpio.h"
+#include "NSS.h"
+#include "NRESET.h"
+#include "FEM_CPS.h" /* LF */
+#include "FEM_CTX.h" /* HF */
 
 static GpioIrqHandler *GpioIrq[16];
 
 void GpioMcuInit( Gpio_t *obj, PinNames pin, PinModes mode, PinConfigs config, PinTypes type, uint32_t value )
 {
-#if 0
-    GPIO_InitTypeDef GPIO_InitStructure;
-
-    if( pin == NC ) 
-    {
-        return;
+    if(pin == NC) {
+      return;
     }
     
     obj->portIndex = ( uint32_t ) pin >> 4;
     
     obj->pin = pin;
     obj->pinIndex = ( 0x01 << ( obj->pin & 0x0F ) );
+    if (pin==RADIO_RESET) {
+      obj->port = (void*)"RESET";
+    } else if (pin==RADIO_NSS) {
+      obj->port = (void*)"NSS";
+    } else if (pin==RADIO_ANT_SWITCH_LF) {
+      obj->port = (void*)"LF";
+    } else if (pin==RADIO_ANT_SWITCH_HF) {
+      obj->port = (void*)"HF";
+    } else {
+      while(1); /* error */
+    }
     
-    if( obj->portIndex < 6 )
-    {
-        obj->port = ( GPIO_TypeDef * )( GPIOA_BASE + ( obj->portIndex << 10 ) );
-        RCC_AHBPeriphClockCmd( ( 0x01 << obj->portIndex ), ENABLE );
-    }
-    else if( obj->portIndex == 6 )
-    {   /* GPIO base address not in alphabetical order after GPIOE (cf stm32l1xx.h, line 926 ) */
-        /* Access to GPIOF and GPIOG not implemented */
-        obj->port = ( GPIO_TypeDef * )( GPIOH_BASE );
-        RCC_AHBPeriphClockCmd( ( 0x01 << ( obj->portIndex - 1 ) ), ENABLE );
-    }
-
     // Sets initial output value
-    if( mode == PIN_OUTPUT )
-    {
+    if(mode==PIN_OUTPUT) {
         GpioMcuWrite( obj, value );
+    } else if (mode==PIN_INPUT) {
+      if (pin==RADIO_RESET) {
+        NRESET_SetInput();
+      } else {
+        while(1); /* error */
+      }
     }
-
-    GPIO_InitStructure.GPIO_Mode = ( GPIOMode_TypeDef )mode;
-    GPIO_InitStructure.GPIO_OType = ( GPIOOType_TypeDef )config;
-    GPIO_InitStructure.GPIO_PuPd = ( GPIOPuPd_TypeDef )type;    
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-    GPIO_InitStructure.GPIO_Pin = obj->pinIndex;
-    GPIO_Init( obj->port, &GPIO_InitStructure );
-#endif
 }
 
 void GpioMcuSetInterrupt( Gpio_t *obj, IrqModes irqMode, IrqPriorities irqPriority, GpioIrqHandler *irqHandler )
 {
+  while( 1 );
 #if 0
     NVIC_InitTypeDef NVIC_InitStructure;
     EXTI_InitTypeDef EXTI_InitStructure;
@@ -156,6 +152,7 @@ void GpioMcuSetInterrupt( Gpio_t *obj, IrqModes irqMode, IrqPriorities irqPriori
 
 void GpioMcuRemoveInterrupt( Gpio_t *obj )
 {
+  while( 1 );
 #if 0
     EXTI_InitTypeDef EXTI_InitStructure;
 
@@ -170,7 +167,6 @@ void GpioMcuRemoveInterrupt( Gpio_t *obj )
 
 void GpioMcuWrite( Gpio_t *obj, uint32_t value )
 {
-#if 0
   if( ( obj == NULL ) || ( obj->port == NULL ) )
     {
         while( 1 );
@@ -182,17 +178,35 @@ void GpioMcuWrite( Gpio_t *obj, uint32_t value )
     }
     if( value == 0 )
     {
-        GPIO_ResetBits( obj->port, obj->pinIndex );
+      if (obj->pin==RADIO_RESET) {
+        NRESET_ClrVal();
+      } else if (obj->pin==RADIO_NSS) {
+        NSS_ClrVal();
+      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+        FEM_CTX_ClrVal();
+      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+        FEM_CPS_ClrVal();
+      } else {
+        while(1); /* error */
+      }
+    } else {
+      if (obj->pin==RADIO_RESET) {
+        NRESET_SetVal();
+      } else if (obj->pin==RADIO_NSS) {
+        NSS_SetVal();
+      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+        FEM_CTX_SetVal();
+      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+        FEM_CPS_SetVal();
+      } else {
+        while(1);
+      }
     }
-    else
-    {
-        GPIO_SetBits( obj->port, obj->pinIndex );
-    }
-#endif
 }
 
 uint32_t GpioMcuRead( Gpio_t *obj )
 {
+  while( 1 );
 #if 0
     if( obj == NULL )
     {
@@ -209,6 +223,7 @@ uint32_t GpioMcuRead( Gpio_t *obj )
 
 void EXTI0_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );
@@ -226,6 +241,7 @@ void EXTI0_IRQHandler( void )
 
 void EXTI1_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );
@@ -243,6 +259,7 @@ void EXTI1_IRQHandler( void )
 
 void EXTI2_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );
@@ -277,6 +294,7 @@ void EXTI3_IRQHandler( void )
 
 void EXTI4_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );
@@ -294,6 +312,7 @@ void EXTI4_IRQHandler( void )
 
 void EXTI9_5_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );
@@ -347,6 +366,7 @@ void EXTI9_5_IRQHandler( void )
 
 void EXTI15_10_IRQHandler( void )
 {
+  while( 1 );
 #if 0
 #ifdef LOW_POWER_MODE_ENABLE
     RtcRecoverMcuStatus( );

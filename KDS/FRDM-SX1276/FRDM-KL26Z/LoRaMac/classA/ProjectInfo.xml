@@ -123,12 +123,18 @@
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd2.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd4.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd5.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd6.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd7.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CPS.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CTX.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\HF1.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LED1.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LED2.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LEDpin1.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LEDpin2.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\NRESET.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\NSS.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\PE_LDD.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\SM1.c</PathName>
@@ -329,13 +335,19 @@
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd4.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd5.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd6.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd7.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CPS.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CTX.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\HF1.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\IO_Map.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LED1.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LED2.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LEDpin1.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\LEDpin2.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\NRESET.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\NSS.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\PE_Const.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\PE_Error.h</PathName>

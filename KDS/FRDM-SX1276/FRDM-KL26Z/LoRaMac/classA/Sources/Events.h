@@ -45,9 +45,15 @@
 #include "UTIL1.h"
 #include "NSS.h"
 #include "BitIoLdd4.h"
+#include "NRESET.h"
+#include "BitIoLdd5.h"
 #include "TI1.h"
 #include "TimerIntLdd1.h"
 #include "HF1.h"
+#include "FEM_CPS.h"
+#include "BitIoLdd6.h"
+#include "FEM_CTX.h"
+#include "BitIoLdd7.h"
 #include "TU1.h"
 
 #ifdef __cplusplus

@@ -119,7 +119,7 @@ void APP_Run(void) {
   LED2_Off();
   for(;;) {
     //LED1_Neg();
-    //Test();
+    Test();
     //WAIT1_Waitms(500);
     App_main();
   }

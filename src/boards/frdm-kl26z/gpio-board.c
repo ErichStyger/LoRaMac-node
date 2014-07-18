@@ -184,7 +184,7 @@ void GpioMcuWrite( Gpio_t *obj, uint32_t value )
         NSS_ClrVal();
       } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
         FEM_CTX_ClrVal();
-      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+      } else if (obj->pin==RADIO_ANT_SWITCH_LF) {
         FEM_CPS_ClrVal();
       } else {
         while(1); /* error */
@@ -196,7 +196,7 @@ void GpioMcuWrite( Gpio_t *obj, uint32_t value )
         NSS_SetVal();
       } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
         FEM_CTX_SetVal();
-      } else if (obj->pin==RADIO_ANT_SWITCH_HF) {
+      } else if (obj->pin==RADIO_ANT_SWITCH_LF) {
         FEM_CPS_SetVal();
       } else {
         while(1);

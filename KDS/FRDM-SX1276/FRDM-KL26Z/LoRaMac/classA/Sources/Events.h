@@ -54,6 +54,7 @@
 #include "BitIoLdd6.h"
 #include "FEM_CTX.h"
 #include "BitIoLdd7.h"
+#include "CS1.h"
 #include "TU1.h"
 
 #ifdef __cplusplus

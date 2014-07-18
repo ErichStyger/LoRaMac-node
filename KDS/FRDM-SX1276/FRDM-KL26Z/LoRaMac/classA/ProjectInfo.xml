@@ -126,6 +126,7 @@
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd5.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd6.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd7.c</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\CS1.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\Cpu.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CPS.c</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CTX.c</PathName>
@@ -338,6 +339,7 @@
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd5.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd6.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\BitIoLdd7.h</PathName>
+      <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\CS1.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\Cpu.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CPS.h</PathName>
       <PathName>C:\Freescale\LoRaMac-node\KDS\FRDM-SX1276\FRDM-KL26Z\LoRaMac\classA\Generated_Code\FEM_CTX.h</PathName>

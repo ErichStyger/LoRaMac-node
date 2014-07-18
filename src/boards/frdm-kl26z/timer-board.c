@@ -58,9 +58,9 @@ void TimerHwInit( void )
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
     NVIC_Init( &NVIC_InitStructure );
-
+#endif
     TimeoutCntValue = 0;
-
+#if 0
     /* Time base configuration */
     TIM_TimeBaseStructure.TIM_Period = 3199;
     TIM_TimeBaseStructure.TIM_Prescaler = 0; 

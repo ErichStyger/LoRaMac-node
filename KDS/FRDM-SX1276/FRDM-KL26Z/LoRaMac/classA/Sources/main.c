@@ -50,6 +50,7 @@
 #include "BitIoLdd6.h"
 #include "FEM_CTX.h"
 #include "BitIoLdd7.h"
+#include "CS1.h"
 #include "TU1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"

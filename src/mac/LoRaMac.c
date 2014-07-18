@@ -327,7 +327,7 @@ static uint8_t LoRaMacSetNextChannel( void )
             }
             if( ( ( Channels[i].DrRange.Fields.Min <= ChannelsDatarate ) &&
                   ( ChannelsDatarate <= Channels[i].DrRange.Fields.Max ) ) == false )
-            { // Check if the current channel selection supports the given datarate
+            { // Check if the current channel selection supports the given data rate
                 continue;
             }
             if( Radio.IsChannelFree( MODEM_LORA, Channels[i].Frequency, RSSI_FREE_TH ) == true )

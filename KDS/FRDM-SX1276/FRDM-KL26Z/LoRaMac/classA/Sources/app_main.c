@@ -259,11 +259,8 @@ int App_main( void )
     TimerSetValue( &Led2Timer, 25000 );
 
     LoRaMacSetAdrOn( true );
-
-    while( 1 )
-    {
-        while( IsNetworkJoined == false )
-        {
+    while( 1 ) {
+        while( IsNetworkJoined == false ) {
 #if( OVER_THE_AIR_ACTIVATION != 0 )
             if( TxNextPacket == true )
             {
@@ -277,63 +274,42 @@ int App_main( void )
             TimerLowPowerHandler( );
 #endif
         }
-        if( Led1TimerEvent == true )
-        {
+        if( Led1TimerEvent == true ){
             Led1TimerEvent = false;
 
             // Switch LED 1 OFF
-            //GpioWrite( &Led1, 1 );
             LED1_Off();
         }
-
-        if( Led2TimerEvent == true )
-        {
+        if( Led2TimerEvent == true ) {
             Led2TimerEvent = false;
-
             // Switch LED 2 OFF
-            //GpioWrite( &Led2, 1 );
             LED2_Off();
         }
-
-        if( TxAckReceived == true )
-        {
+        if( TxAckReceived == true ) {
             TxAckReceived = false;
             // Switch LED 2 ON
-            //GpioWrite( &Led2, 0 );
             LED2_On();
-            //TimerStart( &Led2Timer );
+            TimerStart( &Led2Timer );
         }
-
-        if( RxDone == true )
-        {
+        if( RxDone == true ) {
             RxDone = false;
-
-            if( AppLedStateOn == true )
-            {
+            if( AppLedStateOn == true ) {
                 // Switch LED 3 ON
                 //GpioWrite( &Led3, 0 );
-            }
-            else
-            {
+            } else {
                 // Switch LED 3 OFF
                 //GpioWrite( &Led3, 1 );
             }
         }
-
-        if( TxDone == true )
-        {
+        if( TxDone == true ) {
             TxDone = false;
-
             // Schedule next packet transmission
             TxDutyCycleTime = APP_TX_DUTYCYCLE + randr( -APP_TX_DUTYCYCLE_RND, APP_TX_DUTYCYCLE_RND );
             TimerSetValue( &TxNextPacketTimer, TxDutyCycleTime );
             TimerStart( &TxNextPacketTimer );
         }
-
-        if( TxNextPacket == true )
-        {
+        if( TxNextPacket == true ) {
             TxNextPacket = false;
-
             //pressure = ( uint16_t )( MPL3115ReadPressure( ) / 10 );             // in hPa / 10
             pressure = 10;
             //temperature = ( int16_t )( MPL3115ReadTemperature( ) * 100 );       // in °C * 100
@@ -345,7 +321,7 @@ int App_main( void )
             // Switch LED 1 ON
             //GpioWrite( &Led1, 0 );
             LED1_On();
-            //TimerStart( &Led1Timer );
+            TimerStart( &Led1Timer );
 
             //AppData[0] = ( SelectorGetValue( ) << 4 ) | AppLedStateOn;
             AppData[0] = ( 5 << 4 ) | AppLedStateOn;
@@ -360,7 +336,6 @@ int App_main( void )
             LoRaMacSendFrame( 1, AppData, APP_DATA_SIZE );
             //LoRaMacSendConfirmedFrame( 1, AppData, APP_DATA_SIZE, 1 );
         }
-
         TimerLowPowerHandler( );
     }
 }
